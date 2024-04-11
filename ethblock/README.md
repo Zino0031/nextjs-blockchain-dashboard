@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blockchain Dashboard
 
-## Getting Started
+## Introduction
+Welcome to the Blockchain Dashboard project! This project aims to provide a user-friendly and informative dashboard for displaying relevant data from a public blockchain. The dashboard is built using Next.js for the frontend framework, TailwindCSS for styling, and Jest for unit testing.
 
-First, run the development server:
+## Technology Stack
+- Frontend Framework: Next.js
+- CSS Framework: TailwindCSS
+- Testing Framework: Jest
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dashboard Design and Functionality
+### User Interface
+The dashboard is designed to be clean, intuitive, and user-friendly. It features a responsive layout and intuitive navigation to allow users to easily access and interact with blockchain data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Features
+- View a list of past blocks with relevant information displayed in a tabular format.
+- Filter or sort blocks based on specific criteria such as block height, timestamp, or number of transactions.
+- View detailed information about individual blocks by clicking on them in the list.
+- View charts and lists to visualize blockchain data trends.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Documentation
+### Design Choices
+- Next.js was chosen for its server-side rendering capabilities, which improves performance and SEO.
+- TailwindCSS was selected for its flexibility in designing responsive layouts and to make the code more clean .
+- Jest was chosen for unit testing due to its simplicity and popularity within the React community.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Implementation Details
+- Components are structured using Next.js pages and React components for modularity and reusability.
+- Styling is implemented using TailwindCSS to achieve a consistent and visually appealing design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Version Control
+Git is used for version control, following the GitFlow branching model. The main branches include:
+- **main**: Production-ready code.
+- **develop**: Ongoing development branch.
+- **feature/**: Feature branches for implementing new features.
+- **bugfix/**: Bugfix branches for resolving issues.
+- **release/**: Release branches for preparing releases.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Commits are made frequently to showcase the development process. Commit messages are descriptive and follow best practices for clarity and readability. Git Commitizen is used to enforce consistent commit message formatting and improve readability.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Evaluation Criteria
+- Code quality and adherence to best practices
+- UI/UX design and user-friendliness
+- Functionality and data accuracy
+- Testing coverage and effectiveness
+- Documentation clarity and completeness
+- Version control history and commit messages
