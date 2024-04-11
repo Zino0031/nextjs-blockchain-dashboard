@@ -34,9 +34,9 @@ export default function Header() {
         width={1700}
         height={900}
 
-        className="hidden md:block absolute md:-top-28 -z-10"
+        className="hidden md:block absolute md:-top-24 -z-10"
       />     
-         <div className="hidden md:block bg-[#0F0F0F] px-full py-4 z-10 -mt-4 bottom-0 "></div>
+         <div className="hidden md:block bg-[#0F0F0F] px-full py-5   z-10 -mt- bottom-0 "></div>
       </div>
     </div>
   );
