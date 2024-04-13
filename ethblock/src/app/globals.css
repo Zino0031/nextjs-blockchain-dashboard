@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background:#0F0F0F;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
