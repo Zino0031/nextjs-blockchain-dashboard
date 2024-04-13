@@ -9,7 +9,7 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '#' },
+  { name: 'Home', href: '/' },
   { name: 'Blocks', href: '#' },
   { name: 'Transactions', href: '#' },
 ];
@@ -18,7 +18,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className=" inset-x-0 top-0 z-50">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="text-xl font-semibold">
