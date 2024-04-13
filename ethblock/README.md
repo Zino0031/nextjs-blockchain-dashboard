@@ -49,3 +49,12 @@ Commits are made frequently to showcase the development process. Commit messages
 - Testing coverage and effectiveness
 - Documentation clarity and completeness
 - Version control history and commit messages
+
+## How to Use
+To use the Blockchain Dashboard, follow these steps:
+1. Clone the repository
+2. Create an environment file `.env` in the root directory and add your Moralis API key:
+NEXT_PUBLIC_MORALIS_API_KEY=your_api_key_here
+3. Install dependencies: `npm install`
+4. Run the development server: `npm run dev`
+5. Open your browser and navigate to `http://localhost:3000` to access the dashboard.
