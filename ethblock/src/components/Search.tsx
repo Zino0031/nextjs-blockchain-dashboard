@@ -1,12 +1,30 @@
-import React from 'react';
+'use client'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function Search() {
+const Search = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    router.push(`/block/${encodeURIComponent(searchQuery)}`);
+  };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
+  if (!router) return null;
+
   return (
-    <form className="max-w-screen">
+    <form className="max-w-screen" onSubmit={handleSubmit}>
       <div className="relative">
         <input
           type="search"
           id="search-dropdown"
+          value={searchQuery}
+          onChange={handleChange}
           className="block p-2.5 w-full max-w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
           placeholder="Search Block..."
           required
@@ -35,4 +53,6 @@ export default function Search() {
       </div>
     </form>
   );
-}
+};
+
+export default Search;

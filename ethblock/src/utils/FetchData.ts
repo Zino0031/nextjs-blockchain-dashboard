@@ -6,6 +6,21 @@ Moralis.start({
   apiKey: process.env.NEXT_PUBLIC_MORALIS_API_KEY,
 });
 
+const fetchBlock = async (query: any): Promise<any> => {
+  try {
+    const response = await Moralis.EvmApi.block.getBlock({
+      chain: "0x1",
+      blockNumberOrHash: query
+    });
+
+    const res = response.raw;
+    return res;
+
+  } catch (error) {
+    console.error('Error fetching block:', error);
+    return null;
+  }
+};
 
 
 const fetchEthPrice = async (): Promise<any> => {
@@ -102,4 +117,5 @@ export default {
   fetchEthChart,
   fetchBlockInfo,
   fetchMarketCap,
+  fetchBlock,
 };

@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface TableProps {
   data: any[];
@@ -104,7 +105,11 @@ const Table: React.FC<TableProps> = ({ data, type }) => {
           <React.Fragment key={index}>
             {type === 'blocks' ? (
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.blockNumber}</td>
+                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+      <Link href={`/block/${item.blockNumber}`}>
+        {item.blockNumber}
+      </Link>
+    </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatDate(item.time)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.totalTransactions}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{truncateString(item.miner, 20)}</td>
